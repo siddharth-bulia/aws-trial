@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <video id="video-player" playsinline></video>
+  </body>
+<script src="https://player.live-video.net/1.6.1/amazon-ivs-player.min.js"></script>
+<script>
+  var PLAYBACK_URL = "https://7c90f4a13552.us-east-1.playback.live-video.net/api/video/v1/us-east-1.847438129436.channel.vWd2GuLCJIYk.m3u8";
+  if (IVSPlayer.isPlayerSupported) {
+    const player = IVSPlayer.create();
+    player.attachHTMLVideoElement(document.getElementById('video-player'));
+    player.load(PLAYBACK_URL);
+    player.play();
+  }
+</script>
+</html>
